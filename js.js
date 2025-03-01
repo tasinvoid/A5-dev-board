@@ -47,7 +47,8 @@ themebtn.addEventListener("click", () => {
 });
 //discover btn
 discoverBtn.addEventListener("click", () => {
-  window.location.href = "./main.html";
+  console.log("clicked");
+  //   window.location.href = "./main.html";
 });
 
 function taskAdder() {
