@@ -6,17 +6,26 @@ let currentDate = document.getElementById("currentDate");
 let currentWeekday = document.getElementById("currentWeekday");
 let clearBtn = document.getElementById("clear-btn");
 let themebtn = document.getElementById("theme-btn");
+let body = document.getElementById("body");
+let discoverBtn = document.getElementById("discover-btn");
+let disabledCount = 0;
+
 setCurrentDate();
+
 //complete btn
 cardsContainer.addEventListener("click", (event) => {
   if (event.target.matches("button")) {
     alert("Board Updated Successfully");
     event.target.disabled = true;
+    disabledCount++;
     event.target.classList.remove("bg-blue-600");
     event.target.classList.add("bg-gray-400");
     taskRemover();
     taskAdder();
     addToActivity(event);
+    if (disabledCount > 5) {
+      alert("Congratulations !!!  You have completed all the current tasks");
+    }
   }
 });
 //clear btn
@@ -29,6 +38,18 @@ function taskRemover() {
   taskNumber.innerText = "0" + currentTaskNumber;
 }
 //theme btn
+themebtn.addEventListener("click", () => {
+  let color = `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, "0")}`;
+  body.classList.remove("bg-blue-50");
+  body.style.backgroundColor = color;
+});
+//discover btn
+discoverBtn.addEventListener("click", () => {
+  window.location.href = "./main.html";
+});
+
 function taskAdder() {
   let currentTaskNumber = parseInt(completedTask.innerText);
   currentTaskNumber++;

@@ -29,7 +29,7 @@
       }
     </style>
   </head>
-  <body class="poppins w-5/6 mx-auto bg-blue-50 py-5">
+  <body class="poppins w-5/6 mx-auto bg-blue-50 py-5" id="body">
     <header>
       <nav class="flex justify-between p-5 mb-5 bg-white rounded-xl">
         <div class="flex gap-3 items-center">
@@ -64,12 +64,14 @@
             </div>
             <div class="flex items-center gap-5 gradient px-14 grow rounded-xl">
               <img src="assets/board.png" alt="" />
-              <div>
+              <button id="discover-btn">
                 <p class="text-nowrap text-white text-2xl font-bold">
                   Discover Something
                 </p>
-                <p class="text-nowrap text-white text-xl">New Today!</p>
-              </div>
+                <p class="text-nowrap text-white text-xl text-start">
+                  New Today!
+                </p>
+              </button>
             </div>
             <div
               class="flex items-center gap-5 bg-blue-50 px-8 py-8 rounded-xl"
@@ -164,7 +166,7 @@
               >
                 <div>
                   <p>Deadline</p>
-                  <p class="font-bold">21 March 2025</p>
+                  <p class="font-bold">25 March 2025</p>
                 </div>
                 <button class="bg-blue-600 text-white px-3 rounded-lg">
                   Completed
@@ -192,7 +194,7 @@
               >
                 <div>
                   <p>Deadline</p>
-                  <p class="font-bold">21 March 2025</p>
+                  <p class="font-bold">31 March 2025</p>
                 </div>
                 <button class="bg-blue-600 text-white px-3 rounded-lg">
                   Completed
@@ -248,7 +250,7 @@
               >
                 <div>
                   <p>Deadline</p>
-                  <p class="font-bold">21 March 2025</p>
+                  <p class="font-bold">01 April 2025</p>
                 </div>
                 <button class="bg-blue-600 text-white px-3 rounded-lg">
                   Completed
@@ -274,11 +276,7 @@
             Clear History
           </button>
         </div>
-        <div class="mx-8" id="histories">
-          <div class="bg-blue-50 my-5 p-5 rounded-xl">
-            <p>You have Completed The Task Add Dark Mode at 12:48:15 PM</p>
-          </div>
-        </div>
+        <div class="mx-8" id="histories"></div>
       </div>
     </section>
     <script src="js.js"></script>

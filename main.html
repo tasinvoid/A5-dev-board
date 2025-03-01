@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- tailwind cdn -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .poppins {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .gradient {
+        background: linear-gradient(
+          130.7deg,
+          rgb(55, 82, 253) 0.419%,
+          rgb(108, 127, 250) 52.66%,
+          rgb(155, 168, 248) 99.733%
+        );
+      }
+    </style>
+  </head>
+  <body class="poppins w-5/6 mx-auto bg-blue-50 py-5">
+    <nav class="flex justify-between p-5 mb-5 bg-white rounded-xl">
+      <div class="flex gap-3 items-center">
+        <img src="assets/logo.png" alt="" />
+        <p class="text-4xl">
+          Dev<span class="font-extrabold text-4xl">Board</span>
+        </p>
+      </div>
+      <div class="flex gap-10 items-center">
+        <button
+          class="bg-blue-600 text-white px-3 py-4 rounded-lg text-xl font-semibold"
+          id="back-btn"
+        >
+          Back To Desk
+        </button>
+      </div>
+    </nav>
+    <div class="text-center font-bold text-4xl p-5">Blogs</div>
+    <main class="flex flex-col gap-4">
+      <div class="bg-white py-3 px-5 rounded-lg">
+        <p class="pb-5 font-bold text-xl">
+          Question-1: What are the different ways to select an element in the
+          DOM?
+        </p>
+        <p
+          class="border-t-2 border-dotted border-gray-200 pt-3 text-lg text-gray-500"
+        >
+          Methods to select elements from the DOM are - getElementById
+          querySelector querySelectorAll getElementsByClassName
+          getElementByTagName.
+        </p>
+      </div>
+      <div class="bg-white py-3 px-5 rounded-lg">
+        <p class="pb-5 font-bold text-xl">
+          Question-2: What is the difference between innerHTML, innerText, and
+          textContent ?
+        </p>
+        <p
+          class="border-t-2 border-dotted border-gray-200 pt-3 text-lg text-gray-500"
+        >
+          1.innerHTML- Shows the full html inside the tag 2.innerText- shows
+          just the text inside the tag 3.textContent- Shows plain text without
+          any formatting including all text within the element and its child
+        </p>
+      </div>
+      <div class="bg-white py-3 px-5 rounded-lg">
+        <p class="pb-5 font-bold text-xl">
+          Question-3: What is event delegation in the DOM?
+        </p>
+        <p
+          class="border-t-2 border-dotted border-gray-200 pt-3 text-lg text-gray-500"
+        >
+          Using a single event listener to a parent element instead of each
+          child elements
+        </p>
+      </div>
+      <div class="bg-white py-3 px-5 rounded-lg">
+        <p class="pb-5 font-bold text-xl">
+          Question-4: What is event bubbling in the DOM?
+        </p>
+
+        <p
+          class="border-t-2 border-dotted border-gray-200 pt-3 text-lg text-gray-500"
+        ></p>
+        <p>
+          Event starts at the target element and then bubble up to its parent
+          elements.
+        </p>
+      </div>
+      <div class="bg-white py-3 px-5 rounded-lg">
+        <p class="pb-5 font-bold text-xl">
+          Question-5: How do you create, add, and remove elements using
+          JavaScript?
+        </p>
+        <p
+          class="border-t-2 border-dotted border-gray-200 pt-3 text-lg text-gray-500"
+        >
+          1.To create element const newElement = document.createElement('div');
+          newElement.textContent = 'Hello, World!'; 2.To add element const
+          parentElement = document.getElementById('parent');
+          parentElement.appendChild(newElement); 3.Remove an element using
+          remove() const elementToRemove = document.getElementById('child');
+          elementToRemove.remove();
+        </p>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
